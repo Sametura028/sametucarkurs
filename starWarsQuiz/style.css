@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("image/wp2623586-darth-vader-desktop-4k-wallpapers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.questions {
+    margin: 20rem auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.question {
+    font-size: .5rem;
+    transform: rotate(-97200deg);
+
+    text-align: start;
+    max-width: 125px;
+    max-height: 110px;
+    background-image: linear-gradient(to bottom, #282727, red);
+    transition: all 1s;
+}
+.question:focus-within {
+    transform: rotate(7200deg);
+    max-width: none;
+    max-height: none;
+    width: 175px;
+    height: 230px;
+    font-size: 1rem;
+    margin: 2rem 0 0 3rem;
+    padding: 1.5rem 0  0 1rem ;
+    line-height: 1.5rem;
+}
+button.control{
+width: 25px;
+font-size: .25rem;
+}
+.question:focus-within button.control{
+    width: 50px;
+    font-size: 1rem; 
+}
+#point{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red;
+    font-size: 3rem;
+}

@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to left,#818CDB , #8DD5E4);
+}
+div.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+div.kutu{
+    width: 33%;
+    background: whitesmoke;
+     margin-left: 5%;
+     margin-right: 5%;
+    padding-bottom: 5%;
+    border-radius: 1rem;
+}
+div.kutu img{
+    width: 100%;
+    border-radius: 1rem;
+}
+div.kutu h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+div.kutu p{
+    margin-top: 10%;
+    font-size: 1.25rem;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<htm>
+
+    <head>
+        <style>
+            #keyboard {
+                display: flex;
+                flex-wrap: wrap;
+                width: 1500px;
+                background-color: #ccc;
+                border-radius: 3px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            }
+
+            .key {
+                flex: 7%;
+                display: inline-block;
+                width: 25%;
+                height: 50px;
+                border: 1px solid #fff;
+                border-radius: 3px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 20px;
+                font-weight: bold;
+                color: #333;
+                background-color: #fff;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
+            }
+
+            .key.active {
+                background-color: #ccc;
+            }
+
+            .key.wide {
+                width: 50%;
+            }
+
+            .key.extra-wide {
+                width: 75%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="keyboard">
+            <div class="key wide" data-key="Backquote">`</div>
+            <div class="key" data-key="Digit1">1</div>
+            <div class="key" data-key="Digit2">2</div>
+            <div class="key" data-key="Digit3">3</div>
+            <div class="key" data-key="Digit4">4</div>
+            <div class="key" data-key="Digit5">5</div>
+            <div class="key" data-key="Digit6">6</div>
+            <div class="key" data-key="Digit7">7</div>
+            <div class="key" data-key="Digit8">8</div>
+            <div class="key" data-key="Digit9">9</div>
+            <div class="key" data-key="Digit0">0</div>
+            <div class="key" data-key="Minus">-</div>
+            <div class="key" data-key="Equal">=</div>
+            <div class="key wide" data-key="Backspace">Backspace</div>
+            <div class="key wide" data-key="Tab">Tab</div>
+            <div class="key" data-key="KeyQ">Q</div>
+            <div class="key" data-key="KeyW">W</div>
+            <div class="key" data-key="KeyE">E</div>
+            <div class="key" data-key="KeyR">R</div>
+            <div class="key" data-key="KeyT">T</div>
+            <div class="key" data-key="KeyY">Y</div>
+            <div class="key" data-key="KeyU">U</div>
+            <div class="key" data-key="KeyI">I</div>
+            <div class="key" data-key="KeyO">O</div>
+            <div class="key" data-key="KeyP">P</div>
+            <div class="key" data-key="BracketLeft">[</div>
+            <div class="key" data-key="BracketRight">]</div>
+            <div class="key" data-key="Backslash">\</div>
+            <div class="key wide" data-key="CapsLock">Caps Lock</div>
+            <div class="key" data-key="KeyA">A</div>
+            <div class="key" data-key="KeyS">S</div>
+            <div class="key" data-key="KeyD">D</div>
+            <div class="key" data-key="KeyF">F</div>
+            <div class="key" data-key="KeyG">G</div>
+            <div class="key" data-key="KeyH">H</div>
+            <div class="key" data-key="KeyJ">J</div>
+            <div class="key" data-key="KeyK">K</div>
+            <div class="key" data-key="KeyL">L</div>
+            <div class="key" data-key="Semicolon">;</div>
+            <div class="key" data-key="Quote">'</div>
+            <div class="key wide" data-key="Enter">Enter</div>
+            <div class="key extra-wide" data-key="ShiftLeft">Shift</div>
+            <div class="key" data-key="KeyZ">Z</div>
+            <div class="key" data-key="KeyX">X</div>
+            <div class="key" data-key="KeyC">C</div>
+            <div class="key" data-key="KeyV">V</div>
+            <div class="key" data-key="KeyB">B</div>
+            <div class="key" data-key="KeyN">N</div>
+            <div class="key" data-key="KeyM">M</div>
+            <div class="key" data-key="Comma">,</div>
+            <div class="key" data-key="Period">.</div>
+            <div class="key" data-key="Slash">/</div>
+            <div class="key extra-wide" data-key="ShiftRight">Shift</div>
+            <div class="key" data-key="ControlLeft">Ctrl</div>
+            <div class="key" data-key="MetaLeft">Win</div>
+            <div class="key" data-key="AltLeft">Alt</div>
+            <div class="key extra-wide" data-key="Space">Space</div>        </div>
+
+        <script>
+            const keys = document.querySelectorAll('.key');
+
+            document.addEventListener('keydown', event => {
+                const key = event.code;
+                const activeKey = document.querySelector(`div[data-key="${key}"]`);
+                if (activeKey) {
+                    activeKey.classList.add('active');
+                }
+            });
+
+            document.addEventListener('keyup', event => {
+                const key = event.code;
+                const activeKey = document.querySelector(`div[data-key="${key}"]`);
+                if (activeKey) {
+                    activeKey.classList.remove('active');
+                }
+            });
+        </script>
+    </body>
+
+</htm

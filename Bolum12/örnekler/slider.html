@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css'>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .services-slider {
+            display: flex;
+            max-width: 1300px;
+            width: 100%;
+            background: #2f1453;
+            flex-direction: row-reverse;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+
+        .main-container {
+            width: calc(100% - 155px);
+            margin-left: 20px;
+            max-width: 600px;
+        }
+
+        .nav-container {
+            max-width: 500px;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .nav-container .slick-current p {
+            background: #1e093a;
+            color: white;
+        }
+
+        .nav-container img {
+            max-height: 135px;
+        }
+
+        .nav-container .slick-slide {
+            max-height: 135px;
+            margin-bottom: 18px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 400px;
+            display: flex !important;
+        }
+
+        p {
+            transition: all .5s;
+            line-height: 1.25rem;
+            background: white;
+        }
+
+        @media (min-width: 1000) {
+            .slider-nav {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="services-slider">
+        <div class="main-container">
+            <div class="slider slider-main">
+                <div>
+                    <img src="https://source.unsplash.com/random/600x600">
+                </div>
+                <div>
+                    <img src="https://source.unsplash.com/random/600x600">
+                </div>
+                <div>
+                    <img src="https://source.unsplash.com/random/600x600">
+                </div>
+                <div>
+                    <img src="https://source.unsplash.com/random/600x600">
+                </div>
+            </div>
+        </div>
+        <div class="nav-container">
+            <div class="slider-nav">
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x600">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nihil eum commodi? Consequuntur
+                        quos laborum, quaerat autem, dolore necessitatibus, sint magni consectetur asperiores quisquam
+                        consequatur!</p>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x600">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nihil eum commodi? Consequuntur
+                        quos laborum, quaerat autem, dolore necessitatibus, sint magni consectetur asperiores quisquam
+                        consequatur!</p>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x600">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nihil eum commodi? Consequuntur
+                        quos laborum, quaerat autem, dolore necessitatibus, sint magni consectetur asperiores quisquam
+                        consequatur!</p>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x600">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nihil eum commodi? Consequuntur
+                        quos laborum, quaerat autem, dolore necessitatibus, sint magni consectetur asperiores quisquam
+                        consequatur!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

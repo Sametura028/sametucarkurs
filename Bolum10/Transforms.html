@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .normal {
+            width: 400px;
+            height: 150px;
+            background-color: darkolivegreen;
+            border: 2px dotted black;
+            margin: 5px;
+            color: white;
+            padding: 10px;
+            transition: all .4s;
+            cursor: pointer;
+        }
+
+        .transform:hover {
+            transform: matrix(.5, 1, .5, 0, 360, 180);
+        }
+
+        .bigbox {
+            width: 50px;
+            height: 50px;
+            transition: all 2s;
+            overflow: hidden;
+            background: red;
+            transition-timing-function: ease;
+            transition-timing-function: ease-out;
+            color: blue;
+        }
+
+        .bigbox:hover {
+            background: blue;
+            color: red;
+            width: 250px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transform normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio enim quos ipsam.
+        Molestias,
+        voluptatum reiciendis. Magni deleniti reiciendis amet deserunt facere, quae itaque recusandae. Repudiandae
+        commodi possimus expedita recusandae adipisci.</div>
+    <div class="normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolores similique rerum,
+        temporibus inventore earum iure placeat nihil unde sed reiciendis modi. Mollitia omnis dolor, vero beatae nisi
+        repudiandae dolorum?</div>
+    <div class="bigbox">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, fugit odit quae repellendus quaerat, quidem
+        dolores doloribus magnam fugiat porro saepe ut. Aperiam accusamus, recusandae totam eaque saepe veritatis
+        architecto porro sint esse. Deserunt, corporis esse magnam suscipit a minus nostrum porro sequi voluptas eaque
+        dolore. Dolorum omnis quaerat deleniti.
+    </div>
+</body>
+
+</html>

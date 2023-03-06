@@ -1,0 +1,11 @@
+table{
+    width: 100%;
+}
+th,td{width: 25%;
+    text-align: center;
+    border:1px solid white
+}
+.berkan{
+    color: brown;
+    background: cyan;
+}

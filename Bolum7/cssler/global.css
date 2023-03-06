@@ -1,0 +1,65 @@
+/* text */
+.ortala{
+    text-align: center;
+}
+.kucukbaslik{
+    font-size: 1.25rem;
+}
+.ortabaslik{
+
+    font-size: 1.5rem;
+}
+.buyukbaslik{
+    font-size: 1.75rem;
+}
+/* colors */
+.bg-dark-blue{
+    background: #062e51;
+}
+.bg-light-blue{
+    background: #339ea2;
+}
+.btn{
+    margin-top: 1.25rem;
+    padding: 0.8rem 3rem;
+    border-radius: 7px;
+}
+.btn-dark{
+    background: black;
+}
+.btn-primary{
+    background: #062e51;
+}
+.btn-dark:hover{
+    color:#000 ;
+    background: #fff;
+    border: 0.5px solid #000;
+}
+.btn-primary:hover{
+    color:#062e51 ;
+    background: #fff;
+    border: 0.5px solid #062e51;
+}
+.btn-block{
+    width: 100%;
+    text-align: center;
+}
+/* container */
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+/* forms*/
+.form-group{
+    padding:0.25rem 0 ;
+}
+.form-group label{
+    display: block;
+}
+.form-control{
+    width: 100%;
+    padding: 0.25rem;
+    font-size: 1rem;
+    resize:none;
+    border-radius: 5px;
+}

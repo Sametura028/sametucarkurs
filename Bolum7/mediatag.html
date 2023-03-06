@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0;
+        padding: 0;
+    box-sizing: border-box;}
+    .container{
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box{
+        border: 1px solid black;
+        background: #a7a7a7;
+        padding: 10px;
+        width: 25%;
+    }
+    @media(max-width:768px){
+.box{
+    width: 50%;
+    }
+    }
+    @media(max-width:500px){
+        .box{
+    width: 100%;
+    }
+    } 
+    /* body{
+           
+            background: red;}
+             Tablet 
+        @media ( max-width: 800px){
+            body{background: cyan;}
+        }
+        telefon 
+        @media (max-width:500px) {
+            body{
+                background: purple;
+            }
+        } */  
+         /* p{
+            display: none;
+        
+    }
+        @media ( min-width: 800px){
+            p{display: block;
+            color: brown;}
+        } */
+     
+      
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">
+        <h1>Arcticle 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, odit.</p>
+    </div>
+    <div class="box">
+        <h1>Arcticle 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, odit.</p>
+    </div>
+    <div class="box">
+        <h1>Arcticle 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, odit.</p>
+    </div>
+    <div class="box">
+        <h1>Arcticle 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, odit.</p>
+    </div>
+    
+</div>
+    <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic labore quaerat natus delectus repellendus perferendis aliquam architecto libero ut atque, eum maxime excepturi totam iste soluta ex! Quod, modi praesentium?</p> -->
+
+    
+</body>
+</html>

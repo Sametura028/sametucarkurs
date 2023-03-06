@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="liste.json">
+</head>
+
+<body>
+    <script>
+    var kisiler = '{ "kisiler" : [' + 
+                '{ "ad":"Samet " , "soyad":"Uçar" ,"mevki": "Fullstack developer","konumu": "istinye","tarih": "12/08/06","eposta": "sameura028@gmail.com" },' +
+                '{ "ad":"Samet " , "soyad":"Uçar" ,"mevki": "Front end  developer","konumu": "istinye","tarih": "12/08/06","eposta": "sameura028@gmail.com" },' +
+                '{ "ad":"Samet " , "soyad":"Uçar" ,"mevki": "Back end  developer","konumu": "istinye","tarih": "12/08/06","eposta": "sameura028@gmail.com" } ]}';
+      var kisileriParcala = JSON.parse(kisiler); 
+        console.log(kisileriParcala.kisiler)
+        kisileriParcala.kisiler.forEach(element =>{ });
+        </script>
+</body>
+
+</html>

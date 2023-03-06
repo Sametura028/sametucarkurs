@@ -1,0 +1,32 @@
+body{
+    background: linear-gradient(to left , yellow , gray); }
+p{
+    padding: 1%;
+    text-align: center;}
+div{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+#mavi,#yesil,#kirmizi{
+    color: white;
+
+}
+#mavi{
+    
+    background: blue;
+}
+#kirmizi{
+  
+    background: red;
+}
+#yesil{ 
+    
+       background: green;
+}
+#gri{
+    background: gray;
+}

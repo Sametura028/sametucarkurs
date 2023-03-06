@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Chess board</title>
+	<style>
+		body {
+			text-align: center;
+		}
+
+		.cell {
+			height: 75px;
+			width: 75px;
+			margin:5px;
+            min-width: 75px;
+            max-width: 75px;
+	
+		}
+
+		.blackcell {
+			background-color: rgb(100, 75, 43);
+		}
+
+		.whitecell {
+		background-color: rgb(240, 201, 150);
+
+		}
+	</style>
+</head>
+
+<body>
+	<span>
+		GeeksforGeeks
+	</span>
+	<br><br>
+
+	<script type="text/javascript">
+
+		var center = document.createElement('center');
+
+		var ChessTable = document.createElement('div');
+		for (var i = 0; i < 8; i++) {
+
+			var tr = document.createElement('div');
+			for (var j = 0; j < 8; j++) {
+
+				var td = document.createElement('div');
+
+				if ((i + j) % 2 == 0) {
+
+					td.setAttribute('class', 'cell whitecell');
+					tr.appendChild(td);
+				}
+
+				else {
+
+					td.setAttribute('class', 'cell blackcell');
+
+					tr.appendChild(td);
+				}
+			}
+
+			ChessTable.appendChild(tr);
+		}
+		center.appendChild(ChessTable);
+
+        ChessTable.style.display="flex";
+        ChessTable.style.marginLeft=" 35%";
+		ChessTable.setAttribute('width', '400px');
+		document.body.appendChild(center);
+	</script>
+</body>
+
+</html>

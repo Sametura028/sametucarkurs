@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #flex {
+            margin: 0 auto;
+            height: 500px;
+            width: 75%;
+            background: black;
+            display: flex;
+        }
+
+        #flex>div {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+
+        }
+        #r{   flex-grow: 2;
+            background: red;
+        }
+        #b{   flex-grow: 2;
+            background: blue;
+        }
+        #g{  
+            flex-grow: 4;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flex">
+      <div id="r"></div>
+      <div id="g"></div>
+      <div id="b"></div>
+    </div>
+</body>
+
+</html>

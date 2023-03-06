@@ -1,0 +1,2279 @@
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <meta
+              name="description"
+              content="sametucar-eedta"
+              />
+        <meta
+              property="og:title"
+              content="sametucar-eedta"
+              />
+        <meta
+              property="og:type"
+              content="website"
+              />
+        <meta
+              property="og:url"
+              content="https://test-c.acerapps.io/tr-TR/sametucar-eedta"
+              />
+        <meta
+              property="og:description"
+              content="sametucar-eedta"
+              />
+        <meta
+              property="og:site_name"
+              content="Test C"
+              />
+        <meta
+              property="og:locale"
+              content="tr-TR"
+              />
+
+    <title>sametucar-eedta - Test C</title>
+
+    <link rel="icon" type="image/x-icon" href="https://storage.acerapps.io/app-1/public/20220408/favicon.ico">
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+            <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <link href="/dist/main.css" rel="stylesheet" />
+    <link href="https://storage.acerapps.io/app-1/public/20220901/test-c-app.min.css" rel="stylesheet" />
+
+    
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*header start*/
+
+body {
+    overflow-y: hidden;
+
+}
+body.no-scroll {
+    overflow-y: scroll;
+}
+.theline {
+    border-top: 1px solid rgba(0,0,0,.25);
+    margin: 1rem auto;
+    max-width: 1270px;
+}
+header.bas div.container {
+    max-width: 1300px;
+}
+header.bas div.container div.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+}
+header.bas div.container div.head div.logo img {
+    width: 80%;
+}
+header.bas div.container div.icons {
+    display: flex;
+}
+header.bas div.container div.icons div.icon {
+    margin-right: 1rem;
+}
+div.icon a {
+    color: black;
+    font-size: 1.75rem;
+    transition: all .4s;
+    opacity: .5
+}
+div.icon a:hover {
+    opacity: 1;
+}
+header.bas div.container div.lng {
+    display: flex;
+}
+header.bas div.container div.lng div {
+    cursor: pointer;
+    background: #B9B9B9;
+    width: 50px;
+    text-align: center;
+}
+header.bas div.container div.lng div:hover {
+    color: yellow!important;
+}
+
+header.bas div.container div.lng div.eng {
+    background: #0E4194;
+    color: #fff;
+}
+/*header end*/
+/*navbar start*/
+nav.menu div.container {
+    max-width: 1320px;
+}
+nav.menu div.container ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+nav.menu div.container ul li a {
+    transition: all .4s;
+    color: #B9B9B9;
+    text-decoration: none;
+}
+nav.menu div.container ul li a:hover {
+    color: black;
+}
+.burger-menu {
+    padding: .5rem 0 .5rem 0;
+    height: 40px;
+    display: none;
+}
+.menu-inventory {
+    padding-top: 3rem;
+    width: 100%;
+    height: 100vh;
+    transform: translate(-150%);
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    z-index: 6;
+    background: white;
+    margin-top: -1rem;
+
+}
+.menuitems a {
+    color: #B9B9B9;
+
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+}
+.lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 0px;
+    right: 35px;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: -3px;
+    right: 35px;
+    z-index: 8;
+    opacity: 0;
+    cursor: pointer;
+}
+.lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: black;
+}
+
+.lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+input[type="checkbox"]:checked ~ .menu-inventory {
+    transform: translateX(0);
+}
+input[type="checkbox"]:checked ~ .lines .line1 {
+    transform: rotate(45deg);
+
+}
+
+input[type="checkbox"]:checked ~ .lines .line2 {
+    transform: scaleY(0);
+}
+input[type="checkbox"]:checked ~ .lines .line3 {
+    transform: rotate(-45deg);
+}
+
+/*nav end*/
+/*banner start*/
+.slick-dots {
+    bottom: 3rem;
+}
+.slick-dots li button {
+    opacity: .5;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #fff;
+}
+.slick-dots li.slick-active button:before {
+    top: 1px;
+    color: #fff;
+    font-size: 1.25rem;
+}
+.slick-dots li.slick-active button {
+    opacity: 1;
+
+}
+.slick-dots li button:before {
+    font-size: 0;
+}
+.slideritems .filter {
+    background: #003383;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: .6;
+    top: 0;
+}
+.fa-angle-left, .fa-angle-right {
+    font-size: 5rem;
+    color: white;
+    cursor: pointer;
+}
+.fa-angle-left {
+    position: absolute;
+    z-index: 5;
+    top: 49%;
+    left: 15%;
+}
+.fa-angle-right {
+    position: absolute;
+    z-index: 5;
+    right: 15%;
+    top: 49%;
+}
+div.contents {
+    text-align: center;
+    max-width: 800px;
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+div.contents .header h1 {
+    font-size: 4.5rem;
+}
+div.contents div.paragraph {
+    font-size: 2rem;
+}
+.bannerline {
+    margin: 0 auto!important;
+    max-width: 100px!important;
+    border-top: 3px solid #fff!important
+
+}
+.slider .slideritems {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.slider img {
+    width: 100%;
+}
+/*slider end*/
+/*autoplay start*/
+.our {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    padding-top: 4rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.autoplay {
+    margin-bottom: 5rem;
+}
+div.underline {
+    max-width: 60px;
+    margin: 0 auto;
+    border-top: 3px solid rgba(0,0,0,1);
+    margin-bottom: 3rem;
+}
+.autoplay div img {
+    cursor: pointer;
+    width: 100%;
+    opacity: .30;
+    transition: all .4s;
+}
+.autoplay div img:hover {
+    opacity: 1;
+}
+.autoplay div {
+    padding: 1rem;
+}
+/*autoplay end*/
+/*cards start*/
+div.cards {
+    border-radius: 10px;
+    background: #fff;
+    margin: 1rem 1rem;
+    max-width: 320px;
+    opacity: .5;
+    transition: all .4s;
+}
+.bg {
+    background: #f2f2f2;
+}
+div.cards:hover {
+    opacity: 1;
+    box-shadow: 0px 0 20px #00000063;
+}
+
+
+div.cards img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+}
+div.cards div.explanation {
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+div.cards .buton {
+    text-align: end;
+    padding-top: 1rem;
+}
+div.cards .buton button {
+    border-radius: 5px;
+
+    border: none;
+    background: #0E4194;
+    color: white;
+    padding: .5rem 1.5rem .5rem 1.5rem;
+}
+
+
+.sliderarea {
+    margin: 2rem auto;
+    display: none;
+}
+.sliderarea p {
+    position: relative;
+    top: 6rem;
+    left: 1rem;
+}
+/*cards end*/
+
+.trendcours .container {
+    margin: 2rem auto;
+    max-width: 1300px;
+
+}
+.trendcours .container .courses {
+    display: flex;
+    flex-direction: column;
+}
+
+.trendcours .container .first, .trendcours .container .second {
+    display: flex;
+    justify-content: space-between;
+}
+.sliderarea .areaitems {
+    background:
+    linear-gradient(to bottom, transparent, #0E4194),
+    url("https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png");
+    background-repeat: no-repeat;
+    color: white;
+    background-size: cover;
+    padding: 6rem 8rem;
+    transition: .4s;
+}
+.filter2 {
+    background: linear-gradient(to bottom, transparent, #0E4194);
+    width: 100%;
+    height: 226px;
+    max-width: 321px;
+    position: absolute;
+    transition: .4s;
+
+}
+.trendcours .container .first div, .trendcours .container .second div {
+    color: white;
+    transform: translateX(0);
+    transition: .4s;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.trendcours .container .first div:hover .filter2, .trendcours .container .second div:hover .filter2 {
+    transform: translateY(100%);
+    z-index: 1;
+}
+
+.trendcours .container .first img, .trendcours .container .second img {
+    transition: .4s;
+}
+.trendcours .container .first div:hover img, .trendcours .container .second div:hover img {
+    scale: 1.1;
+    cursor: pointer;
+
+}
+.trendcours .container .first div p, .trendcours .container .second div p {
+    position: relative;
+    top: 11rem;
+    left: 2rem;
+}
+.areaitems {
+    margin-right: 2rem;
+    padding: 6rem 0rem!important;
+
+}
+div.clear {
+    clear: both;
+    padding: 2rem 0 2rem 0;
+}
+
+/*trend courses end*/
+/*news start*/
+
+article.news div.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+article.news div.container div.newsarea {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+article.news div.container div.newsitems {
+    max-width: 400px;
+    box-shadow: 0px 0 20px #00000063;
+    background: #fff;
+}
+
+.text,.cardp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.cardp {
+    -webkit-line-clamp: 5!important;
+}
+.header,h3,.date{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+article.news {
+    padding-bottom: 2rem;
+    background: #f2f2f2;
+}
+.newsslider,.sliderhead,.sliderline {
+    display: none;
+}
+.sliderhead {
+    padding-top: 2rem;
+}
+.newsslider div.slideritems {
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    box-shadow: 0px 0 20px #00000063;
+    display: flex;
+    flex-direction: column;
+}
+
+div.newsitems img {
+    width: 100%;
+
+}
+article.news div.container div.newsitems div.newarticle,div.slideritems div.newarticle {
+    margin: 0 auto;
+    padding: 1rem;
+
+}
+article.news div.container div.newsitems div.newarticle i,.newsslider div.slideritems i {
+    color: #1D1D1D;
+    opacity: .5;
+    margin-top: 2rem;
+}
+/*news end*/
+/*numbers start*/
+section.numbers div.container {
+    max-width: 1300px;
+    margin: 0rem auto;
+}
+section.numbers div.container div.bubbles {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+section.numbers div.container div.bubbles div.bubble {
+    text-align: center;
+    font-size: 1.25rem;
+}
+section.numbers div.container div.bubbles div.bubble div.number {
+    color: #003383;
+}
+section.numbers div.container div.bubbles div.bubble div p {
+    cursor: pointer;
+}
+.numicon {
+    border: 1px solid rgba(14,65,148,.30);
+    border-radius: 100%;
+    padding: 50px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+}
+.miniline {
+    margin: 1rem auto;
+    border-top: 1px solid rgba(0,0,0,.30);
+    max-width: 25px;
+}
+.numicon img {
+    object-fit: scale-down;
+    width: 50px;
+    height: 50px;
+}
+
+/*numbers end*/
+/*blog start*/
+.blog {
+    background: #f2f2f2;
+}
+.blog .container {
+    max-width: 1300px;
+    padding-bottom: 3rem;
+}
+div.blogcontent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.content {
+    flex: 1 0 50%;
+    padding: 1rem;
+}
+div.content a {
+    border-radius: 10px;
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    transition: all .4s;
+}
+div.content a:hover {
+    box-shadow: 0px 0 20px #00000063;
+
+}
+div.content img {
+   border-radius: 10px;
+    width: 100%;
+    min-width: 260px;
+    min-height: 160px;
+    height: 100%;
+    object-fit: cover;
+     
+}
+.content .image{
+    max-width: 260px;
+    width: 100%;
+}
+div.content div.blogtext {
+    padding: 0 0 1rem 1rem;
+
+}
+div.content div.blogtext .header {
+    margin-bottom: 1rem;
+}
+div.content div.blogtext .date {
+    margin-top: .5rem;
+}
+/*Blog end*/
+/*Footer start*/
+footer {
+    background: #0E4194;
+}
+.eddtaarticle {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+footer div.container {
+    color: white!important;
+    max-width: 1300px;
+    margin: auto auto;
+}
+h2.link {
+    text-align: start;
+}
+footer div.container a {
+    text-decoration: none;
+    opacity: 1;
+    color: white!important;
+}
+footer div.container a:hover {
+    opacity: .5;
+}
+
+footer .container div.icons {
+    display: flex;
+}
+footer .container div.icons a {
+    display: flex;
+    opacity: .5;
+    margin-left: 1rem;
+}
+
+footer .container div.icons a:hover {
+    opacity: 1!important;
+}
+footer .container .follow {
+    display: flex;
+    font-size: 1.5rem;
+    padding-bottom: 4rem;
+}
+footer .container .follow .followtext {
+    color: yellow;
+}
+footer .container div.icon a {
+    color: white!important;
+    font-size: 1.5rem;
+}
+
+footer .container div.icon {
+    margin-left: 1rem;
+}
+footer div.container .footer {
+    display: flex;
+    justify-content: space-between;
+}
+footer div.container hr {
+    border-color: #fff;
+}
+.linkline {
+    margin: 0 0!important;
+    margin-bottom: 2rem!important;
+    border-top: 3px solid rgba(255,255,255,.5)!important;
+}
+footer div.container .footer .explanation {
+    display: flex;
+    max-width: 483px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.copyright {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+footer div.container .footer ul {
+    list-style: none;
+    line-height: 2rem;
+}
+footer div.container .footer .explanation img {
+    max-width: 260px;
+}
+/*Footer end*/
+@media only screen and (min-width:2560px) {
+    .blog .container {
+        max-width: 2000px;
+    }
+    footer div.container {
+
+        max-width: 2000px;
+        font-size: 1.5rem;
+    }
+    footer div.container .footer .explanation {
+        max-width: 500px;
+    }
+    .theline {
+        max-width: 1900px;
+        border-top: 3px solid rgba(0,0,0,.1);
+
+    }
+
+    nav.menu div.container {
+        max-width: 2000px;
+    }
+    .menuitems {
+        font-size: 2rem;
+    }
+
+    header.bas div.container {
+        max-width: 2000px;
+    }
+    div.contents div.header h1 {
+        font-size: 5rem;
+    }
+    .our {
+        font-size: 5rem;
+    }
+    div.contents div.paragraph {
+        font-size: 3rem;
+    }
+    div.contents {
+        max-width: 1100px;
+    }
+    .trendcours .container .first div, .trendcours .container .second div, .sliderarea {
+
+        padding: 8rem 13rem;
+    }
+    .trendcours .container {
+        max-width: 2000px;
+    }
+    .trendcours .container .first div p, .trendcours .container .second div p {
+        top: 8rem;
+        font-size: 2rem;
+        left: -12rem;
+    }
+    article.news div.container {
+
+        max-width: 2000px;
+    }
+    article.news div.container div.newsitems {
+        max-width: 566px!important;
+    }
+    article.news div.container div.newsitems img {
+        min-width: 566px;
+    }
+    article.news div.container div.newsitems div.newarticle {
+        max-width: 466px;
+    }
+}
+
+@media only screen and (max-width:1440px) {
+    div.contents {
+        max-width: 600px;
+    }
+    div.contents .header h1 {
+        font-size: 3.5rem;
+    }
+    div.contents div.paragraph {
+        font-size: 1.25rem;
+    }
+
+}
+@media only screen and (max-width:1200px) {
+    .trendcours {
+        display: none;
+    }
+
+    .sliderarea {
+        display: block;
+    }
+    article.news {
+        display: none;
+    }
+    .newsslider,.sliderhead,.sliderline {
+        display: block;
+    }
+    .trendcours .container .first div, .trendcours .container .second div {
+        padding: 5rem 6rem;
+    }
+    .trendcours .container .first div p, .trendcours .container .second div p {
+        top: 5rem;
+        left: -4rem;
+    }
+
+
+    div.slideritems div.newarticle {
+        max-width: 450px;
+    }
+    div.clear {
+        clear: both;
+        padding: 1rem 0 1rem 0;
+    }
+
+}
+
+
+@media only screen and (max-width:1024px) {
+
+    footer div.container .footer .explanation {
+        margin-top: 1.5rem;
+    }
+    footer .container .follow .followtext {
+        margin-bottom: 1rem;
+    }
+    footer div.container .footer .explanation img {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    footer div.container .footer {
+        max-width: 500px;
+        margin: 0 auto;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .theline {
+        max-width: 710px;
+    }
+    footer .container .follow {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2.link {
+        padding-top: 0;
+        text-align: center;
+    }
+    .linkline {
+        margin: 0 auto!important;
+    }
+    div.contents {
+        max-width: 400px;
+    }
+    div.contents .header h1 {
+        font-size: 2.5rem;
+    }
+    div.contents div.paragraph {
+        font-size: 1rem;
+    }
+div.content img {
+    min-width: 435px;
+}
+    .line {
+        max-width: 715px;
+    }
+    nav.menu div.container {
+        max-width: 768px;
+    }
+    .menuitems {
+        font-size: 1rem;
+    }
+    .autoplay {
+        margin-bottom: 0!important;
+    }
+    .partner {
+        margin-top: 0!important;
+        padding-top: 0!important;
+        margin-bottom: 0!important;
+    }
+    .linepart {
+        margin-bottom: 0!important;
+    }
+    div.blogcontent {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+.content .image {
+    max-width: none;
+}
+    header.bas div.container {
+        max-width: 735px;
+    }
+    .eddtaarticle {
+        text-align: center;
+    }
+    div.cards {
+        margin: 1rem 5rem;
+    }
+    footer .container ul {
+        text-align: center;
+    }
+}
+@media only screen and (max-width:992px) {
+
+    div.contents {
+        max-width: 400px;
+    }
+    div.buton {
+        margin-right: 1rem;
+    }
+    div.cards div.explanation {
+        padding: 1rem;
+    }
+    div.slideritems div.newarticle {
+        max-width: 350px;
+    }
+}
+@media only screen and (max-width:768px) {
+.slick-dots {
+    bottom:15px;
+}
+    .our {
+        margin-top: 0rem;
+    }
+    .partner {
+        padding: 0!important;
+    }
+    .menu, header.bas div.container div.icons {
+        display: none;
+    }
+    div.slideritems div.newarticle {
+        max-width: 250px;
+    }
+    .burger-menu {
+        display: block;
+    }
+    .logo img {
+        width: 70%;
+    }
+    .fa-angle-left, .fa-angle-right {
+        font-size: 3rem;
+    }
+    .slick-dots li button {
+        width: 15px;
+        height: 15px;
+    }
+    .slick-dots li.slick-active button:before {
+        font-size: 0.25rem;
+    }
+    .fa-angle-left {
+        left: 10%;
+    }
+    .fa-angle-right {
+        right: 10%;
+
+    }
+    section.numbers div.container div.bubbles {
+        flex-wrap: wrap;
+    }
+    section.numbers div.container div.bubbles div.bubble {
+        flex: 1 0 50%;
+    }
+    .numicon {
+        max-width: 200px;
+        margin: 1rem auto;
+    }
+    .numicon img {
+        width: 100px;
+        height: 100px;
+    }
+    div.cards {
+        margin: 1rem 2rem;
+    }
+    div.content img {
+    min-width: 300px;
+}
+}
+
+@media only screen and (max-width:576px) {
+    div.underline {
+
+        margin-bottom: 1rem;
+    }
+    div.contents {
+        max-width: 300px;
+        top: 1.75rem;
+    }
+
+    div.content a {
+        flex-direction: column;
+    }
+    div.content img {
+        width: 100%;
+
+    }
+    div.slideritems div.newarticle {
+        max-width: 450px;
+    }
+
+}
+@media only screen and (max-width:480px) {
+    div.contents {
+        top: 2.75rem;
+    }
+    div.contents div.header h1 {
+        font-size: 1.75rem;
+    }
+    div.contents div.paragraph {
+        font-size: .75rem;
+    }
+    footer .container div.icons {
+        margin-left: 0;
+    }
+    footer .container div.icon {
+        margin-left: 1rem;
+    }
+    .our {
+        font-size: 1.75rem;
+    }
+
+    div.cards {
+        max-width: 350px;
+        margin: 1rem 4rem;
+    }
+    div.slideritems div.newarticle {
+        max-width: 350px;
+    }
+    section.numbers div.container div.bubbles {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:360px) {
+    div.cards div.explanation {
+        font-size: .75rem;
+    }
+
+    div.contents {
+        top: 1.5rem;
+    }
+    footer .container div.icon {
+        margin-left: 0;
+    }
+    div.cards .header h3 {
+        font-size: 1.2rem;
+    }
+    article.news div.container div.newsitems img {
+        max-width: 270px;
+    }
+    article.news div.container div.newsitems div.newarticle {
+        max-width: 250px;
+    }
+    footer .container div.icons {
+        margin-left: 0;
+    }
+    .slick-dots {
+        bottom: 0px;
+    }
+        .content .image {
+    max-width: 260px;
+}
+div.content img {
+    min-width: 200px;
+}
+}
+
+@media only screen and (max-width:280px) {
+    div.contents {
+        top: 0;
+    }
+
+    article.news div.container div.newsitems img {
+        max-width: 250px;
+    }
+    article.news div.container div.newsitems div.newarticle {
+        max-width: 230px;
+    }
+    div.cards {
+        margin: 3rem;
+        max-width: 250px;
+    }
+    div.cards img {
+        max-width: 250px;
+    }
+}
+</style>
+
+
+    
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+                     
+                     ></script>
+</head>
+<body>
+    <header id="header">
+        
+
+
+    </header>
+    <div id="content">
+        
+
+
+<div class="acerapps-row">
+
+
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<header class="bas">
+    <div class="container">
+        <div class="head">
+            <div class="icons">
+                <div class="icon">
+                    <a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="https://test-c.acerapps.io/tr-TR/sametucar-eedta"><img src="https://storage.acerapps.io/app-1117/eedta logo.png" alt="" /></a>
+            </div>
+            <div class="lng">
+                <div class="eng library-grid-images" id="language-19923" onclick="changebg(19923);">
+                    ENG
+                </div>
+                <div class="fi library-grid-images" id="language-252" onclick="changebg(252);">
+                    Fİ
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="theline">
+    </div>
+</header>        </div>
+    </div>
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<nav class="menu">
+    <div class="container">
+        <ul>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-eedta">Home</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-aboutus">About Us</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-trainingcourses">Training Courses</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-news">News</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-blog">Blog</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-gallery">Gallery</a></li>
+            <li class="menuitems"><a href="">Rules</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-contactus">Contact Us</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+
+
+<nav class="burger-menu">
+    <div class="burger-container">
+        <input class="checkbox" type="checkbox" onclick="noscroll(appTimes, $(this))" name="" id="" />
+        <div class="lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-inventory">
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-eedta">Home</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-aboutus">About Us</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-trainingcourses">Training Course</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-news">News</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-blog">Blog</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-gallery">Gallery</a></li>
+            <li class="menuitems"><a href="https://test-c.acerapps.io/tr-TR/sametucar-contactus">Contact Us</a></li>
+            <li class="menuitems">  <div class="icons">
+                <span class="icon"><a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-instagram"></i></a></span>
+                <span class="icon"><a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-facebook-f"></i></a></span>
+                <span class="icon"><a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-twitter"></i></a></span>
+                <span class="icon"><a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-linkedin-in"></i></a></span>
+            </div>
+            </li>
+        </ul>
+    </div>
+</nav>        </div>
+    </div>
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<section class="slider">
+    <div class="slideritems">
+        <div class="filter"></div>
+        <div class="contents">
+            <div class="header">
+                <h1>Our Services</h1>
+                <div class="underline bannerline">
+                    
+                </div>
+            </div>
+            <div class="paragraph">
+                We look  forward  to getting to know you and to helping
+                you take your company to new heights?
+            </div>
+        </div>
+        <img src="https://storage.acerapps.io/app-1117/eddtabanner.png" alt="" />
+    </div>
+    <div class="slideritems">
+         <div class="contents">
+            <div class="header">
+                <h1>Our Services</h1>
+                     <div class="underline bannerline">
+                    
+                </div>
+            </div>
+            <div class="paragraph">
+                We look  forward  to getting to know you and to helping
+                you take your company to new heights?
+            </div>
+        </div>
+        <img src="https://storage.acerapps.io/app-1117/eddtabanner.png" alt="" />
+    </div>
+    <div class="slideritems">
+         <div class="contents">
+            <div class="header">
+                <h1>Our Services</h1>
+                     <div class="underline bannerline">
+                    
+                </div>
+            </div>
+            <div class="paragraph">
+                We look  forward  to getting to know you and to helping
+                you take your company to new heights?
+            </div>
+        </div>
+        <img src="https://storage.acerapps.io/app-1117/eddtabanner.png" alt="" />
+    </div>
+</section>        </div>
+    </div>
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<h1 class="our partner">Our Partners</h1>
+<div  class="underline linepart">
+</div>
+<section  class="autoplay">
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+    <div>
+        <img src="https://storage.acerapps.io/app-1100/public/20220118/DİGİMONDİ-acerrenks.png" alt="" />
+    </div>
+</section>        </div>
+    </div>
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<div
+ class="bg">
+<h1 class="our">Trending Courses</h1>
+<div class="underline">
+</div>
+<section class="trend">
+    <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+     <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+     <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+     <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+     <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+     <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+     <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+     <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+     <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+     <div class="cards">
+        <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+        <div class="explanation">
+            <div class="header">
+             <h3>Lorem Ipsum</h3>
+            </div>
+             <div class="cardp">
+               <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of
+                type and scrambled it to make a type
+                specimen book.</p>
+            </div><div class="buton">
+                        <button>Read More</button>
+            </div>
+        </div>
+     </div>
+ </section>
+ </div>        </div>
+    </div>
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<h1
+    class="our">Trend Courses</h1>
+<div
+    class="underline"></div>
+<section
+    class="trendcours">
+    <div class="container">
+        <div class="courses">
+            <div class="first">
+                <div>
+                    <div class="filter2">
+                        <p>
+                            Lorem Ipsum
+                        </p>
+                    </div>
+                    <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+
+                </div>
+                <div>
+                    <div class="filter2">
+                        <p>
+                            Lorem Ipsum
+                        </p>
+                    </div>
+                    <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+
+                </div>
+                <div>
+                    <div class="filter2">
+                        <p>
+                            Lorem Ipsum
+                        </p>
+                    </div>
+                    <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+
+                </div>
+            </div>
+            <div class="clear">
+
+            </div>
+            <div class="second">
+                <div>
+                    <div class="filter2">
+                        <p>
+                            Lorem Ipsum
+                        </p>
+                    </div>
+                    <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+
+                </div>
+                <div>
+                    <div class="filter2">
+                        <p>
+                            Lorem Ipsum
+                        </p>
+                    </div>
+                    <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+
+                </div>
+                <div>
+                    <div class="filter2">
+                        <p>
+                            Lorem Ipsum
+                        </p>
+                    </div>
+                    <img src="https://storage.acerapps.io/app-1117/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.png" alt="" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sliderarea">
+    <div class="areaitems">
+        <p>
+            Lorem Ipsum
+        </p>
+    </div>
+    <div class="areaitems">
+        <p>
+            Lorem Ipsum
+        </p>
+    </div>
+    <div class="areaitems">
+        <p>
+            Lorem Ipsum
+        </p>
+    </div>
+    <div class="areaitems">
+        <p>
+            Lorem Ipsum
+        </p>
+    </div>
+    <div class="areaitems">
+        <p>
+            Lorem Ipsum
+        </p>
+    </div>
+    <div class="areaitems">
+        <p>
+            Lorem Ipsum
+        </p>
+    </div>
+</section>        </div>
+    </div>
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<article class="news">
+    <div class="container">
+        <h1 class="our">News</h1>
+        <div class="underline">
+        </div>
+        <div class="newsarea">
+            <div class="newsitems">
+                <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+                <div class="newarticle">
+                    <div class="header">
+                        <h3>Lorem Ipsum</h3>
+                    </div>
+                    <div class="text">
+                        <p>
+                            Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="clock">
+                        <i class="fa-solid fa-clock"><span>  3 Days Later</span></i>
+                    </div>
+                </div>
+            </div>
+            <div class="newsitems">
+                <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+                <div class="newarticle">
+                    <div class="header">
+                        <h3>Lorem Ipsum</h3>
+                    </div>
+                    <div class="text">
+                        <p>
+                            Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="clock">
+                        <i class="fa-solid fa-clock"><span>  3 Days Later</span></i>
+                    </div>
+                </div>
+            </div>
+            <div class="newsitems">
+                <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+                <div class="newarticle">
+                    <div class="header">
+                        <h3>Lorem Ipsum</h3>
+                    </div>
+                    <div class="text">
+                        <p>
+                            Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="clock">
+                        <i class="fa-solid fa-clock"><span>  3 Days Later</span></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<h1
+    data-aos-anchor-placement="bottom-bottom" class="our sliderhead">News</h1>
+<div
+    data-aos-anchor-placement="bottom-bottom" class="underline sliderline"></div>
+<section
+    data-aos-anchor-placement="bottom-bottom" class="newsslider">
+
+    <div class="slideritems">
+        <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+        <div class="newarticle">
+            <div class="header">
+                <h3>Lorem Ipsum</h3>
+            </div>
+            <div class="text">
+                <p>
+                    Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book.
+                </p>
+            </div>
+            <div class="clock">
+                <i class="fa-solid fa-clock"><span>  3 Days Later</span></i>
+            </div>
+        </div>
+    </div>
+    <div class="slideritems">
+        <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+        <div class="newarticle">
+            <div class="header">
+                <h3>Lorem Ipsum</h3>
+            </div>
+            <div class="text">
+                <p>
+                    Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book.
+                </p>
+            </div>
+            <div class="clock">
+                <i class="fa-solid fa-clock"><span>  3 Days Later</span></i>
+            </div>
+        </div>
+    </div>
+    <div class="slideritems">
+        <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+        <div class="newarticle">
+            <div class="header">
+                <h3>Lorem Ipsum</h3>
+            </div>
+            <div class="text">
+                <p>
+                    Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book.
+                </p>
+            </div>
+            <div class="clock">
+                <i class="fa-solid fa-clock"><span>  3 Days Later</span></i>
+            </div>
+        </div>
+    </div>
+    <div class="slideritems">
+        <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+        <div class="newarticle">
+            <div class="header">
+                <h3>Lorem Ipsum</h3>
+            </div>
+            <div class="text">
+                <p>
+                    Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book.
+                </p>
+            </div>
+            <div class="clock">
+                <i class="fa-solid fa-clock"><span>  3 Days Later</span></i>
+            </div>
+        </div>
+    </div>
+</section>        </div>
+    </div>
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<section  class="numbers">
+    <div class="container">
+        <h1 class="our">EEDTA with Numbers</h1>
+        <div class="underline"></div>
+        <div class="bubbles">
+            <div class="bubble">
+                <div class="numicon">
+                    <img src="https://storage.acerapps.io/app-1117/okul.png" alt="" />
+                </div>
+                <div class="number">
+                    <p>
+                        10+
+                    </p>
+                </div>
+                <div class="miniline"></div>
+                <div>
+                    <p class="content">
+                        Courses
+                    </p>
+                </div>
+            </div>
+            <div class="bubble">
+                <div class="numicon">
+                    <img src="https://storage.acerapps.io/app-1117/yazi.png" alt="" />
+                </div>
+                <div>
+                    <p class="number">
+                        500+
+                    </p>
+                </div>
+                <div class="miniline"></div>
+                <div>
+                    <p class="content">
+                        Courses
+                    </p>
+                </div>
+            </div>
+            <div class="bubble">
+                <div class="numicon">
+                    <img src="https://storage.acerapps.io/app-1117/sosyal.png" alt="" />
+                </div>
+                <div>
+                    <p class="number">
+                        50+
+                    </p>
+                </div>
+                <div class="miniline"></div>
+                <div>
+                    <p class="content">
+                        Courses
+                    </p>
+                </div>
+            </div>
+            <div class="bubble">
+                <div class="numicon">
+                    <img src="https://storage.acerapps.io/app-1117/ogretmen.png" alt="" />
+                </div>
+                <div>
+                    <p class="number">
+                        50+
+                    </p>
+                </div>
+                <div class="miniline"></div>
+                <div>
+                    <p class="content">
+                        Courses
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>        </div>
+    </div>
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<article class="blog">
+    <div class="container">
+        <h1 class="our">Blog</h1>
+        <div class="underline"></div>
+        <div class="blogcontent">
+
+            <div class="content">
+                <a href="https://test-c.acerapps.io/tr-TR/sametucar-blog">
+
+                      <div class="image">
+
+                        <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+                    </div>
+                    <div class="blogtext">
+                        <div class="date">
+                            <p>
+                                Mark Twain - 6.10.2022
+                            </p>
+                        </div>
+                        <div class="header">
+                            <h4>Lorem Ipsum</h4>
+                        </div>
+                        <div class="text">
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer of
+                                type and scrambled it to make a type specimen book.
+                            </p>
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="content">
+                <a href="https://test-c.acerapps.io/tr-TR/sametucar-blog">
+
+                    <div class="image">
+
+                        <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+                    </div>
+                    <div class="blogtext">
+                        <div class="date">
+                            <p>
+                                Mark Twain - 6.10.2022
+                            </p>
+                        </div>
+                        <div class="header">
+                            <h4>Lorem Ipsum</h4>
+                        </div>
+                        <div class="text">
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer of
+                                type and scrambled it to make a type specimen book.
+                            </p>
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="content">
+                <a href="https://test-c.acerapps.io/tr-TR/sametucar-blog">
+
+                      <div class="image">
+
+                        <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+                    </div>
+                    <div class="blogtext">
+                        <div class="date">
+                            <p>
+                                Mark Twain - 6.10.2022
+                            </p>
+                        </div>
+                        <div class="header">
+                            <h4>Lorem Ipsum</h4>
+                        </div>
+                        <div class="text">
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer of
+                                type and scrambled it to make a type specimen book.
+                            </p>
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="content">
+                <a href="https://test-c.acerapps.io/tr-TR/sametucar-blog">
+
+                    <div class="image">
+
+                        <img src="https://storage.acerapps.io/app-1117/A.png" alt="" />
+                    </div>
+                    <div class="blogtext">
+                        <div class="date">
+                            <p>
+                                Mark Twain - 6.10.2022
+                            </p>
+                        </div>
+                        <div class="header">
+                            <h4>Lorem Ipsum</h4>
+                        </div>
+                        <div class="text">
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer of
+                                type and scrambled it to make a type specimen book.
+                            </p>
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</article>        </div>
+    </div>
+    <div class="acerapps-col" style="--col: 100%">
+        <div class="acerapps-container">
+
+
+<footer>
+    <div class="container">
+        <div class="footer">
+            <div class="explanation">
+                <img src="https://storage.acerapps.io/app-1117/eedta-beyazlogo.png" alt="" />
+                <div class="eddtaarticle">
+                    European Economic for the Development of Vocational Training Academy (EEDTA)
+                    is an energetic NGO with experienced staff. You will always find here fresh trainees
+                    from elsewhere who constantly improve their skills and knowledge through different
+                    activities and courses organised by our team of experts.
+                </div>
+                <div class="follow">
+                    <div class="followtext">
+
+                        Follow Up
+                    </div>
+                    <div class="icons">
+                        <div class="icon">
+                            <a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <div class="icon">
+                            <a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div class="icon">
+                            <a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        <div class="icon">
+                            <a href="https://mehmetrifatevyapteml.meb.k12.tr"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <h2 class="our link">Useful Links</h2>
+                <div class="underline linkline"></div>
+                <ul class="linklist">
+                    <li><a href="https://test-c.acerapps.io/tr-TR/sametucar-eedta">Home</a></li>
+                    <li><a href="https://test-c.acerapps.io/tr-TR/sametucar-aboutus">About Us</a></li>
+                    <li><a href="https://test-c.acerapps.io/tr-TR/sametucar-trainingcourses">Training Courses</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="https://test-c.acerapps.io/tr-TR/sametucar-gallery">Gallery</a></li>
+                    <li><a href="">Rules</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2 class="our link">Contact Us</h2>
+                <div class="underline linkline"></div>
+                <ul class="linklist">
+                    <li><a href="https://www.google.com/maps/place/Selkämerenkatu+13,+00180+Helsinki,+Finlandiya/@60.1603447,24.9165754,17z/data=!3m1!4b1!4m5!3m4!1s0x46920a4c79011443:0xf9bfc2d926dd0742!8m2!3d60.1603447!4d24.9165754" target="_blank"><i class="fa-solid fa-location-dot"></i>  Adress : Selkämerenkatu 13 B 27, 00180
+                        Helsinki, Finland
+                    </a></li>
+                    <li><a href="tel:358 41 7457026"><i class="fa-solid fa-phone"></i>  Phone : +358 41 7457026</a></li>
+                    <li><a href="mailto:info@eedta.eu"><i class="fa-regular fa-envelope"></i>  E-Mail : info@eedta.eu</a></li>
+                </ul>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.2316001408137!2d24.916575399999996!3d60.160344699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a4c79011443%3A0xf9bfc2d926dd0742!2sSelk%C3%A4merenkatu%2013%2C%2000180%20Helsinki%2C%20Finlandiya!5e0!3m2!1str!2str!4v1668750261783!5m2!1str!2str" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <hr />
+        <div class="copyright">
+            <p>
+                Copyright © 2021 European Economic for the Development of Vocational Training Academy
+            </p>
+        </div>
+
+    </div>
+</footer>        </div>
+    </div>
+</div>
+
+
+    </div>
+    <footer id="footer">
+        
+
+
+    </footer>
+
+    <script src="/dist/main.js?v=pPgyV0LYl46lGhHaMPrFgXid2kl-Srfb86kLmPs9kFk"></script>
+
+    <script>
+            const AcerApps = new AcerAppsClass({
+                urls: {
+                    apiLogin: '/tr-TR/Authorization/ApiLogin',
+                    getApiResult: '/tr-TR/Api/GetApiResult',
+                    getApiResultV2: '/tr-TR/Api/GetApiResultV2',
+                    renderComponent: '/tr-TR/Component/Render',
+                    renderComponentByDataSource: '/tr-TR/Component/RenderByDataSource',
+                    replaceFormValuesBase64ToLink: '/tr-TR/Form/ReplaceFormValuesBase64ToLink',
+                    postForm: '/tr-TR/Form/SaveFormValues',
+                    logout: '/tr-TR/Authorization/Logout?targetUrl=--targetUrl--',
+                    changeCulture: '/tr-TR/Culture/ChangeCulture?targetCulture=--culture--&currentLink=--currentLink--'
+                },
+                isAuthenticated: false,
+    
+            });
+    </script>
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" 
+                     
+                     ></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" 
+                     
+                     ></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" 
+                     
+                     ></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" 
+                     
+                     ></script>
+
+    <script src="https://storage.acerapps.io/app-1/public/20220901/test-c-app.min.js"></script>
+
+    
+<script>
+    
+
+    function changebg(id) {
+    $(".library-grid-images").css("background-color", "#B9B9B9");
+    $(".library-grid-images").css("color", "#000");
+
+    var divid = "language-"+id;
+
+    $("#"+divid).css("background-color", "#0E4194");
+    $("#"+divid).css("color", "#fff");
+
+
+    $('.library-images-info').load('/fam/library/library-image-info.php?id='+id);
+    $("#image-actions-footer").css("visibility", "visible");
+    $('#id-image-actions-footer').val(id);
+};
+
+$(':checkbox').change(function() {
+    $('body').toggleClass('no-scroll', !this.checked);
+}).change();
+$('.slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<i class="fa-solid fa-angle-left"></i>',
+    nextArrow: '<i class="fa-solid fa-angle-right"></i>',
+    responsive: [{
+        breakpoint: 999999,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+        }
+    }, {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+        }
+    },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false
+            }
+        }]
+});
+
+
+$('.autoplay').slick({
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    loop: true,
+    infinite: true,
+    swipe: false,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    dots: false,
+    arrows: false,
+    responsive: [{}, {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: true
+        }
+    },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1
+
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+
+            }
+        }]
+});
+
+$('.trend').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    loop: true,
+    infinite: true,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    dots: false,
+    arrows: false,
+    responsive: [{}, {
+        breakpoint: 1440,
+        settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+
+        }
+    },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+
+            }
+
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+
+            }
+
+
+
+        }]
+});
+$('.sliderarea').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    loop: true,
+    infinite: true,
+    swipe: false,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    dots: false,
+    arrows: false,
+    responsive: [{}, {
+
+        breakpoint: 576,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+
+        }
+
+    }]
+});
+
+$('.newsslider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    loop: true,
+    infinite: true,
+    swipe: false,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    dots: false,
+    arrows: false,
+    responsive: [{}, {
+
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+
+        }, breakpoint: 576,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+
+        }
+
+    }]
+});
+
+    
+
+    function renderRecapthca() {
+        
+    }
+</script>
+
+</body>
+</html>

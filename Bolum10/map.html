@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps API ile yarım daire çizme</title>
+  <style type="text/css">
+    #map {
+      height: 500px;
+      width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs1kmeUTrP6-S3AaiApved6Mno4h12mHc&libraries=geometry"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs1kmeUTrP6-S3AaiApved6Mno4h12mHc&callback=initMap"></script>
+  <script >
+    var center = {lat: 41.109807855338644, lng: 29.03866071911606}
+
+    var mapDiv = document.getElementById('map');
+
+    var map = new google.maps.Map(mapDiv, {
+      center: center,
+      zoom: 6
+    });
+
+    var circleCenter = new google.maps.LatLng(center.lat, center.lng);
+
+   
+    var radius = 1000;
+
+    var circle = new google.maps.Circle({
+      center: circleCenter,
+      radius: radius,
+      fillColor: '#FF0000',
+      fillOpacity: 0.2,
+      strokeColor: '#FF0000',
+      strokeOpacity: 1.0,
+      strokeWeight: 2,
+      map: map
+    });
+  </script>
+</body>
+</html>
+``

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        p,
+        h5 {
+            text-align: center;
+        }
+
+        .card {
+            position: relative;
+            max-width: 19rem;
+            overflow: hidden;
+
+            z-index: 2;
+        }
+
+        .card-body {
+            background: white;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            transform: translateX(0);
+            transform-style: preserve-3d;
+
+
+            transition: all 1s;
+        }
+
+        .card:hover .card-body {
+            transform: translateY(100%);
+            transition: all .65s;
+
+        }
+
+        .overlay {
+            max-width: 19rem;
+            height: 100%;
+            padding: 8rem 6rem;
+            position: absolute;
+            width: 100%;
+            scale: 0;
+            background-color: rgba(0, 0, 255, .5);
+            transition: all .75s ease;
+        }
+
+
+
+        button {
+            transition: all 1s ease-in;
+
+            scale: 0;
+            position: relative;
+            font-size: 1.25rem;
+        }
+
+        .card:hover .overlay,
+        .card:hover button {
+            scale: 1;
+
+        }
+        .slider {
+            display: none;
+        }
+        @media only screen and (max-width: 1200px) {
+
+ .slider {
+            display: block;
+        }
+        .cardsarea{
+            display: none;
+        }
+}     @media only screen and (max-width: 320px) {
+button{
+    font-size: .75rem;
+}
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row cardsarea">
+            <div class="col-l-4 mt-5 ml-4 mr-4">
+                <div class="card rounded">
+                    <div class="overlay">
+                        <button class="rounded border-0">Daha Fazla</button>
+                    </div>
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body mx-auto">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <hr>
+                        <p class="card-text">16.01.2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-l-4 mt-5 ml-4 mr-4">
+                <div class="card rounded">
+                    <div class="overlay">
+                        <button class="rounded border-0">Daha Fazla</button>
+                    </div>
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body mx-auto">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <hr>
+                        <p class="card-text">16.01.2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-l-4 mt-5 ml-4 mr-4">
+                <div class="card rounded">
+                    <div class="overlay">
+                        <button class="rounded border-0">Daha Fazla</button>
+                    </div>
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body mx-auto">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <hr>
+                        <p class="card-text">16.01.2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row slider">
+            <div class="col-l-4 mt-5 ml-4 mr-4">
+                <div class="card rounded">
+                    <div class="overlay">
+                        <button class="rounded border-0">Daha Fazla</button>
+                    </div>
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body mx-auto">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <hr>
+                        <p class="card-text">16.01.2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-l-4 mt-5 ml-4 mr-4">
+                <div class="card rounded">
+                    <div class="overlay">
+                        <button class="rounded border-0">Daha Fazla</button>
+                    </div>
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body mx-auto">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <hr>
+                        <p class="card-text">16.01.2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-l-4 mt-5 ml-4 mr-4">
+                <div class="card rounded">
+                    <div class="overlay">
+                        <button class="rounded border-0">Daha Fazla</button>
+                    </div>
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body mx-auto">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the card's content.</p>
+                        <hr>
+                        <p class="card-text">16.01.2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

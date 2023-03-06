@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,
+        td,
+        th {
+            font-size: x-large;
+            text-align: center;
+            border: 5px solid gray;
+            border-radius: 10px;
+        }
+
+        tr {
+            background: darkgray;
+        }
+
+        table tr td table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body bgcolor="orange">
+    <table cellspacing="10" style="width: 50%; height: 500px;">
+        <tr>
+            <th colspan="3">header</th>
+        </tr>
+        <tr>
+            <td>nav</td>
+            <td> section <table cellspacing="15">
+                    <tr>
+                        <td>header </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 100px;">article</td>
+                    </tr>
+                    <tr>
+                        <td>footer </td>
+                    </tr>
+                </table>
+            </td>
+            <td>aside </td>
+        </tr>
+
+        <tr>
+            <td colspan="3">footer </td>
+        </tr>
+    </table>
+</body>
+
+</html>

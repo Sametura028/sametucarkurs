@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        /* .fixde-topbar{
+            width: 50%;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 20px;
+        } */
+        #red{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+        }
+        #blue{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+        top: 10px;
+        left: 10px;
+        }
+        #black{
+            width: 100px;
+            height: 100px;
+            background: black;
+            position: relative;
+        top: 3px;
+        left: 15px;
+        z-index: -1;
+        }
+    </style>
+</head>
+<body >
+    <!-- <div class="fixde-topbar">naber</div> -->
+    <div id="red"></div>
+    <div id="blue"></div>
+    <div id="black"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+
+    <html>
+
+    <head>
+
+        <meta charset=utf-8 />
+
+        <title> </title>
+
+    </head>
+
+    <body>
+
+        <p id='metin'>Javascript DOM</p>
+
+        <div>
+
+            <button id="btn" onclick="tikla()">Stil Ver</button>
+
+        </div>
+
+    </body>
+
+    </html>
+    <script>
+
+        var btn = document.querySelector("#btn");
+
+        btn.onclick = function () {
+            var kirmizi = Math.floor(Math.random() * 255);
+            var yesil = Math.floor(Math.random() * 255);
+            var mavi = Math.floor(Math.random() * 255);
+
+            var renk = `rgb(${kirmizi} ,${yesil}, ${mavi})`;
+
+            metin.style.color = renk;
+            document.getElementById("metin").style.fontFamily = "Impact,Charcoal,sans-serif";
+        }
+
+    </script>
+</body>
+
+</html>

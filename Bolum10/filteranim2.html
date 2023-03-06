@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            display: flex;
+            max-width: 1300px;
+            justify-content: space-between;
+        }
+
+        .filter {
+            background-color: rgba(58, 58, 58, .87);
+            width: 100%;
+            height: 100%;
+            max-width: 400px;
+            position: absolute;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            transition: 1s;
+            z-index: 2;
+            transform: translateY(90%);
+        }
+
+        .eleman {
+            transform: translateX(0);
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        img {
+            scale: 1.1;
+            transition: all 1s;
+        }
+
+        .eleman:hover img {
+            scale: 1;
+        }
+
+        .eleman:hover .filter {
+            font-size: 1.5rem;
+            z-index: 1;
+            transition: 1s;
+            cursor: pointer;
+            transform: translateY(0);
+        }
+
+        @media only screen and (max-width:816px) {
+            .container {
+                flex-direction: column;
+            }
+            .filter {
+            font-size: 1.5rem;
+            z-index: 1;
+            transition: 1s;
+            cursor: pointer;
+            transform: translateY(0);
+        }
+            .eleman {
+                margin: 0 auto;
+                margin-top: 3rem;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="eleman">
+            <div class="filter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ad consequuntur id saepe
+                unde quaerat itaque officia cupiditate velit reprehenderit, expedita laborum voluptate aliquam. Impedit
+                tenetur explicabo illum doloremque aspernatur?</div>
+            <img src="../depo/A.png" alt="">
+        </div>
+        <div class="eleman">
+            <div class="filter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ad consequuntur id saepe
+                unde quaerat itaque officia cupiditate velit reprehenderit, expedita laborum voluptate aliquam. Impedit
+                tenetur explicabo illum doloremque aspernatur?</div> <img src="../depo/A.png" alt="">
+
+        </div>
+    </div>
+</body>
+
+</html>

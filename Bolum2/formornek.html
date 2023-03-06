@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form Örneği</title>
+  <style>
+    table,
+    tr,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <table>
+      <tr>
+        <td><label>Ad</label></td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <td><label>Soyad</label></td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <td><label>Yaş</label></td>
+        <td>
+          <input type="number" placeholder="Yaşınızı girin">
+        </td>
+      </tr>
+      <tr>
+        <td><label>Resim Ekle</label></td>
+        <td>
+          <input type="file">
+          
+
+        </td>
+      </tr>
+      <tr>
+        <td><label>TC No</label></td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <td><label>Cinsiyet</label></td>
+        <td>
+          <input type="radio" id="c1" name="Cinsiyet" value="female">
+          <label for="c1">K</label>
+          <input type="radio" id="c2" name="Cinsiyet" value="male">
+          <label for="c2">E</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Yabancı Diller</label></td>
+        <td>
+          <label>İngilizce</label>
+          <input type="checkbox">
+          <label>Fransızca</label>
+          <input type="checkbox">
+          <label>Japonca</label>
+          <input type="checkbox">
+        </td>
+      </tr>
+      <tr>
+        <td><label>Görüş</label></td>
+        <td>
+          <textarea rows="5" cols="30" placeholder="Görüşleriniz Bizim İçin çok önemli..."></textarea>
+        </td>
+      </tr>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <input type="submit" value="Kaydet">
+            <button type="reset"> Sıfırla</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <br><br>
+    <label>Adınız:  </label><input type="text"><br><br>
+    <label>Soyadınız:  </label><input type="text"><br><br>
+    <label>Şireniz:  </label><input type="password"><br><br>
+    <input type="radio" id="c1" name="Cinsiyet" value="female">
+    <label for="c1">Kadın</label>
+    <input type="radio" id="c2" name="Cinsiyet" value="male">
+    <label for="c2">Erkek</label><br><br>
+    <label>Bidiğiniz Diller: </label>
+    <label>İngilizce</label>
+    <input type="checkbox">
+    <label>Fransızca</label>
+    <input type="checkbox">
+    <label>Japonca</label>
+    <input type="checkbox"><br><br>
+    <label>Yaşadığınız il</label>
+    <select>
+      <option value="sec" selected>seçiniz</option>
+      <option value="istanbul">İstanbul</option>
+      <option value="ankara">Ankara</option>
+      <option value="kars">Kars</option>
+      <option value="giresun">Giresun</option>
+    </select><br>
+    <label>Adresiniz</label><br>
+    <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
+    <input type="submit" value="Kaydet">
+    <button type="reset"> Sıfırla</button>
+  </form>
+</body>
+
+</html>

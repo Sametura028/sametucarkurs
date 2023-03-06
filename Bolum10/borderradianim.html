@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .card {
+            width: 200px;
+            height: 400px;
+            box-shadow: 0px 0 20px #03030317;
+            border-radius: 0px 70px;
+            transition: all .2s;
+            background: white;
+            padding: 2rem;
+            margin: 0 auto;
+        }
+
+        .container {
+            cursor: pointer;
+            margin: 10rem auto;
+            max-width: 400px;
+        }
+
+        .container:hover .card {
+            border-radius: 70px 0px;
+        }
+
+        .circle {
+            top: .5rem;
+            border-radius: 400px;
+            background: green;
+            transition: all .4s;
+            width: 400px;
+            position: absolute;
+            z-index: -1;
+            height: 400px;
+            opacity: 0;
+        }
+
+        .head2 {
+            position: relative;
+            transition: all .4s;
+            top: 10rem;
+        }
+
+        .card .header h1 {
+            transition: all .4s;
+            position: absolute;
+            top: 6rem;
+            color: green;
+            text-align: center;
+            margin: 5rem auto;
+        }
+
+        .container:hover .circle,
+        .container:hover .metin {
+            opacity: .6;
+        }
+
+        .container:hover .header h1 {
+            top: 0rem;
+            color: #fff;
+        }
+
+        .container:hover .head2 {
+            top: 5rem;
+        }
+
+        .metin {
+            position: relative;
+            top: 5rem;
+            transition: all .2s;
+            opacity: 0;
+            margin-top: 2rem;
+            color: #000 !important;
+        }
+
+        .date {
+            position: relative;
+            bottom: -8rem;
+        }
+
+        @media only screen and (max-width:400px) {
+            .container {
+                max-width: 300px;
+            }
+
+            .circle,
+            .metin {
+                opacity: .6;
+            }
+
+            .circle {
+                border-radius: 200px;
+                height: 350px;
+                left: 1rem;
+                width: 350px;
+            }
+
+            .head2 {
+                top: 0;
+            }
+
+            .container .header h1 {
+                top: 0rem;
+                left: 6rem;
+                color: #fff;
+            }
+
+            .metin {
+                top: 0;
+            }
+
+            .date {
+                bottom: 0;
+            }
+
+            .card {
+                width: 150px;
+                height: 350px;
+            }
+        }
+
+        @media only screen and (max-width: 350px) {
+            .circle {
+                border-radius: 150px;
+                height: 275px;
+                left: 2rem;
+                width: 275px;
+            }
+
+            .container .header h1 {
+                left: 5rem;
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="card">
+            <div class="header">
+                <h1>Lorem, ipsum.</h1>
+            </div>
+            <div class="head2">
+                <h2>Lorem, ipsum.</h2>
+            </div>
+            <div class="metin">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos sequi ducimus explicabo
+                    corporis
+                    assumenda quaerat numquam quod! Quasi provident dicta qui totam, assumenda vitae magni nulla ipsum
+                    iusto. At, ducimus.</p>
+            </div>
+            <div class="date">
+                <hr>
+                <p>23.05.2024</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

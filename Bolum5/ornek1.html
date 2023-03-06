@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-scrollbar{
+            width: 150px;
+            height: 150px;
+            position: relative;  
+            /* overflow: scroll;
+            overflow-x: hidden; */
+              overflow-y: scroll;
+        }
+        .dis{
+            margin-top: 6px;
+            border-radius: 5%;
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgba(171, 170, 170, 0.338);
+        }
+        .custom-scrollbar::-webkit-scrollbar-button{
+            
+            left: 10%;
+            width: 50px; 
+            height: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar{
+            width: 10px;
+          
+            padding: 20px;
+            margin-block:30em ;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track{
+          height: 10%;
+            background-color: #a1a1a1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb{
+             
+            background-color: #00f;
+        }
+        #lokasyon{
+            top: 1px;
+            left: 10px;
+        }
+        #uyeliksinifi{
+             top: 2px;
+             left: 10px;
+        }
+        p{
+            color:blue ;
+        }
+    </style>
+</head>
+<body>
+    <div class="dis"><p>Lokasyon</p>
+    <div class="custom-scrollbar" id="lokasyon">
+        <input type="checkbox"  id="Adana">
+        <label for="Adana">Adana</label><br>
+        <input type="checkbox" name="" id="ist">
+        <label for="ist">İstanbul</label><br>
+        <input type="checkbox" name="" id="grs">
+        <label for="grs">Giresun</label><br>
+        <input type="checkbox" name="" id="ktm">
+        <label for="ktm">Kastamonu</label><br>
+        <input type="checkbox" name="" id="trb">
+        <label for="trb">Trabzon</label><br>
+        <input type="checkbox" name="" id="rz">
+        <label for="rz">Rize</label><br>
+        <input type="checkbox" name="" id="svs">
+        <label for="svs">Sivas</label><br>
+        <input type="checkbox" name="" id="krs">
+        <label for="krs">Kars</label><br>
+        <input type="checkbox" name="" id="atv">
+        <label for="atv">Artvin</label><br>
+        <input type="checkbox" name="" id="uk">
+        <label for="uk">Uşak</label><br>
+        <input type="checkbox" name="" id="svs2">
+        <label for="svs2">Sivas</label><br>
+        <input type="checkbox" name="" id="krs2">
+        <label for="krs2">Kars</label><br>
+        <input type="checkbox" name="" id="atv2">
+        <label for="atv2">Artvin</label><br>
+        <input type="checkbox" name="" id="uk2">
+        <label for="uk2">Uşak</label>
+    </div>
+</div>
+<div class="dis"><p>Üyelik sınıfı</p>
+    <div class="custom-scrollbar" id="uyeliksinifi">  
+        <input type="checkbox" name="" id="a">
+        <label for="a">A</label><br>
+        <input type="checkbox" name="" id="b">
+        <label for="b">B</label><br>
+        <input type="checkbox" name="" id="c">
+        <label for="c">C</label><br>
+        <input type="checkbox" name="" id="d">
+        <label for="d">D</label><br>
+        <input type="checkbox" name="" id="e">
+        <label for="e">E</label><br>
+        <input type="checkbox" name="" id="f">
+        <label for="f">F</label><br>
+        <input type="checkbox" name="" id="g">
+        <label for="g">G</label><br>
+    </div></div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            /* kartların varsayılan görünümü */
+            background-color: white;
+            border: 2px solid black;
+            font-size: 32px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card.flip {
+            /* kartların ters çevrilmiş görünümü */
+            transform: rotateY(180deg);
+        }
+
+        .card[data-symbol="♠️"] {
+            /* sinek sembolüne sahip kartlar */
+            color: black;
+        }
+
+        .card[data-symbol="♣️"] {
+            /* kupa sembolüne sahip kartlar */
+            color: black;
+        }
+
+        .card[data-symbol="♥️"] {
+            /* karo sembolüne sahip kartlar */
+            color: red;
+        }
+
+        .card[data-symbol="♦️"] {
+  /* maça sembolüne sahip kartlar */
+  color: red;
+}
+    </style>
+</head>
+
+<body>
+    <!-- <table id="game-board">
+        <tr>
+            <td class="card" data-card-value="1">?</td>
+            <td class="card" data-card-value="2">?</td>
+        </tr>
+        <tr>
+            <td class="card" data-card-value="1">?</td>
+            <td class="card" data-card-value="2">?</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="card" data-symbol="♠️">?</div>
+            </td>
+          
+        </tr>
+        <tr>
+            <td>
+                <div class="card" data-symbol="♣️">?</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <div class="card" data-symbol="♥️">?</div>
+            </td>
+            
+        </tr>
+
+      </table>    !-->
+        <div class="card" data-symbol="♠️">?</div>
+        <div class="card" data-symbol="♣️">?</div>
+        <div class="card" data-symbol="♥️">?</div>
+        <div class="card" data-symbol="♦️">?</div>
+   
+    <script>
+       const cards = document.querySelectorAll('.card');
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+  if (lockBoard) return;
+  if (this === firstCard) return;
+
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    // ilk kartın ters çevrilmesi
+    hasFlippedCard = true;
+    firstCard = this;
+
+    return;
+  }
+
+  // ikinci kartın ters çevrilmesi
+  secondCard = this;
+  checkForMatch();
+}
+
+function checkForMatch() {
+  let isMatch = firstCard.dataset.symbol === secondCard.dataset.symbol;
+
+  isMatch ? disableCards() : unflipCards();
+}
+
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
+}
+
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard();
+  }, 1500);
+}
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 20);
+    card.style.order = randomPos;
+  });
+})();
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+
+    </script>
+</body>
+
+</html>

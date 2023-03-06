@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="rock-paper-scissors-form">
+        <label>
+          <input type="radio" name="choice" value="rock" checked> Taş
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="choice" value="paper"> Kağıt
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="choice" value="scissors"> Makas
+        </label>
+        <br>
+        <button type="submit">Oyna</button>
+      </form>
+      
+      <script>
+        const form = document.getElementById('rock-paper-scissors-form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Formun sayfayı yeniden yüklemesini önler
+
+  // Oyuncunun seçimini alır
+  const playerChoice = form.elements.choice.value;
+
+  // Bilgisayarın seçimini rastgele oluşturur
+  const computerChoice = getRandomChoice();
+
+  // Sonuçları hesaplar ve ekrana yazdırır
+  const result = getResult(playerChoice, computerChoice);
+  printResult(result);
+});
+
+      </script>
+</body>
+</html>

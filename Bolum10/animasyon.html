@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes Renk {
+            from{left:0;}
+to{left:450px;}
+from{right: 0;}
+to{right:450px;}
+
+ 
+/* 
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200rem;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            } */
+        }
+
+        .rules {
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: darkred;
+            -webkit-animation-name: Renk;
+            -webkit-animation-duration: 4s;
+            animation-name: Renk;
+            animation-iteration-count: infinite;
+            animation-duration: 4s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rules"></div>
+</body>
+
+</html>

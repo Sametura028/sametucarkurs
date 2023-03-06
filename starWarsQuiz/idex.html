@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p id="point">Puan:</p>
+    <div class="questions">
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>Obi-Wan Kenobi'nin padawanı kimdir?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="q1" value="Ahsoka Tano" name="padawan">
+                        <label for="q1">Ahsoka Tano</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="q2" value="Mace Windu" name="padawan">
+                        <label for="q2">Mace Windu</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="q3" value="Anakin Skywalker" name="padawan">
+                        <label for="q3">Anakin Skywalker</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="q4" value="star" name="padawan">
+                        <label for="q4">Star Killer</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck()" class="control" id="ctrl1">control</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>En çok Midi-chlorian sayısına sahip Sith lordu kimdir?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="vader" name="sith">
+                        <label for="vader">Darth Vader</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="malak" name="sith">
+                        <label for="malak">Darth Malak</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="sidius" name="sith">
+                        <label for="sidius">Darth Sidius</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="raven" name="sith">
+                        <label for="raven">Darth Raven</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck2()" class="control" id="ctrl2">control</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>"Hello There." sözünü kim söylemiştir?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="grievous" name="kenobi">
+                        <label for="grievous">General Grievous</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="kenobi" name="kenobi">
+                        <label for="kenobi">Obi-Wan Kenobi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="sidius2" name="kenobi">
+                        <label for="sidius2">Darth Sidius</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="padme" name="kenobi">
+                        <label for="padme">Padmé Amidala</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck3()" class="control" id="ctrl3">control</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>George Lucas'a göre en güçle jedi?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="luke" name="kenobi">
+                        <label for="luke">Luke Skywalker</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="kenobi2" name="kenobi">
+                        <label for="kenobi2">Obi-Wan Kenobi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="binks" name="kenobi">
+                        <label for="binks">Jar Jar Binks</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="ben" name="kenobi">
+                        <label for="ben">Ben Solo</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck4()" class="control" id="ctrl3">control</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>En güçlü Sith lordu kimdir?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="vader2" name="sith">
+                        <label for="vader2">Darth Vader</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="killer2" name="sith">
+                        <label for="killer2">Star Killer</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="sidius3" name="sith">
+                        <label for="sidius3">Darth Sidius</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="maul" name="sith">
+                        <label for="maul">Darth Maul</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck5()" class="control" id="ctrl4">control</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>Baby Yoda'nın gerçek adı nedir?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="grogu" name="sith">
+                        <label for="grogu">Grogu</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="sinan" name="sith">
+                        <label for="sinan">Sinan Engin</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="yoda" name="sith">
+                        <label for="yoda">Yoda</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="rey" name="sith">
+                        <label for="rey">Rey</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck6()" class="control" id="ctrl5">control</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>Sarı ışın kılıcını kimler kullanır?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="manda" name="sith">
+                        <label for="manda">Mandalorian'lar</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="gri" name="sith">
+                        <label for="gri">Gri jedi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="sith" name="sith">
+                        <label for="sith">Sith lordları</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="droid" name="sith">
+                        <label for="droid">Droidler</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck7()" class="control" id="ctrl6">control</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>Cumhuriyet hangi askerleri kullanır?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="clone" name="sith">
+                        <label for="clone">Klon Askerler</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="jedi" name="sith">
+                        <label for="jedi">Jedi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="storm" name="sith">
+                        <label for="storm">Storm Trooper</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="droid2" name="sith">
+                        <label for="droid2">Droidler</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck8()" class="control" id="ctrl7">control</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>Midi-Chlorian ne işe yarar?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="force" name="sith">
+                        <label for="force">Güç Kullanımı</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="strength" name="sith">
+                        <label for="strength">Kuvvet</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="fire" name="sith">
+                        <label for="fire">Ateş Soluma</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="fly" name="sith">
+                        <label for="fly">Uçuş</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck9()" class="control" id="ctrl8">control</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="question" tabindex="0">
+            <table>
+                <tr>
+                    <td>
+                        <p>Kimler güç hayaletine dönüşür?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="clone2" name="sith">
+                        <label for="clone2">Klone Askerler</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="jedis" name="sith">
+                        <label for="jedis">Jedilar</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="sith2" name="sith">
+                        <label for="sith2">Sith Lordları</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" id="droids" name="sith">
+                        <label for="droids">Droidler</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button onclick="pointcheck10()" class="control" id="ctrl9">control</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        var point = 0
+        function pointcheck() {
+            if (document.getElementById("q3").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl1").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        }
+        function pointcheck2() {
+            if (document.getElementById("vader").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl2").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        }
+        function pointcheck3() {
+            if (document.getElementById("kenobi").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl3").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        }
+        function pointcheck4() {
+            if (document.getElementById("luke").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl4").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        }
+        function pointcheck5() {
+            if (document.getElementById("sidius3").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl5").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        } function pointcheck6() {
+            if (document.getElementById("grogu").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl6").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        } function pointcheck7() {
+            if (document.getElementById("gri").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl7").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        } function pointcheck8() {
+            if (document.getElementById("clone").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl8").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        } function pointcheck9() {
+            if (document.getElementById("force").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl9").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        } function pointcheck10() {
+            if (document.getElementById("jedis").checked) {
+                point++;
+                console.log(point)
+                document.getElementById("point").innerHTML = "Puan:" + " " + point;
+                document.getElementById("ctrl10").style.display = "none"
+
+            }
+            else {
+
+            }
+
+        }
+    </script>
+    </script>
+</body>
+
+</html>

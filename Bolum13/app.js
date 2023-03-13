@@ -147,3 +147,89 @@
 // const zamat = new ZamatAyi
 
 // zamat.zamatAyiGoster("zamat","uçmaz")
+// let i = 0;
+// while (i < 10) {
+//     console.log(i)
+//     if (i == 5) {
+//      break; 
+//     }
+//     i++;
+// }
+
+// do {i++
+//     console.log(i)
+
+// }while (i < 10)
+// const langs = ["d1", "d2", "d3", "k", "d", "f", "fre"];
+
+// for (let index = 0; index < langs.length; index++) {
+//     console.log(langs[index])
+// }
+// langs.forEach(function(lang, index){
+//     console.log(lang,index)
+// })
+// const users=[
+//     {name:"Samet",age:16},
+//     {name:"Kürdishan",age:16},
+//     {name:"Transbaran",age:64},
+// ]
+// const names = users.map( function(user){
+//     return user.name
+// });
+// const ages = users.map( function(user){
+//     return user.age
+// });
+
+// console.log(names, ages)
+// const user={
+//     name:"Samet",
+//     age:25
+// }
+// for ( let key in user){
+//     console.log(key,user[key])
+// }
+// const cevap =confirm("Emin misiniz?");
+// console.log(cevap);
+//  if(cevap){
+//     console.log(
+//         "gçerli"
+//     )
+//  }
+//  else{
+//     console.log(
+//         "gçersiz"
+//     )
+//  }
+// const cevap = prompt( "2 + 2")
+// console. log(cevap) ;
+// console. log(typeof cevap);
+// if(cevap==4)
+// {
+//     console.log("Tebrikler")
+// }
+// else{
+//     console.log("Bilemedin")
+// }
+// let value;
+// value = window;
+// value = window.location;
+// value = window.location.host;
+// value = window.location.hostname;
+// value = window.location.port;
+// value = window.location.href;
+// value = window.outerHeight;
+// value = window.outerWidth;
+// value = window.scrollX;
+// value = window.scrollY;
+// console.log(value)
+var value1 = 10;
+let value2 = 20;
+const value3 = 30;
+function Func(){
+var value1 = 40;
+let value2 = 50;
+const value3 = 60;
+console. log(value1 , value2, value3) ;
+}
+Func()
+console. log(value1 , value2, value3) ;

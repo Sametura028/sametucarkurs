@@ -665,4 +665,7 @@ img.card-title {
     .mobile {
         display: flex;
     }
+    .margin-bottom{
+        margin-bottom: 5rem;
+    }
 }
